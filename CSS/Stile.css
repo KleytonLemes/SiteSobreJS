@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+
+    color: rgb(240, 240, 240);
+    font-family: 'Archivo', sans-serif;
+}
+
+/* Estiliza a barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem vertical */
+    height: 10px; /* Altura da barra de rolagem horizontal */
+}  
+/* Estiliza o polegar da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: #000000; /* Cor de fundo do polegar */
+    border-radius: 0px; /* Raio de borda do polegar */
+}
+/* Opcional: Estiliza a barra de rolagem */
+::-webkit-scrollbar {
+    background-color: #0e0e0e; /* Cor de fundo da barra de rolagem em hover */
+} 
+/* Opcional: Estiliza a barra de rolagem quando o mouse está sobre ela */
+::-webkit-scrollbar:hover {
+    background-color: #414141; /* Cor de fundo da barra de rolagem em hover */
+}  
+/* Opcional: Estiliza o polegar da barra de rolagem quando o mouse está sobre ele */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #080808; /* Cor de fundo do polegar em hover */
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cabeca{
+    margin-top: 32px;
+    margin-inline: auto;
+    padding-inline: 60px;
+
+    position: fixed;    
+    top: 0;
+    width: 33%;
+    left: 50%;
+    z-index: 200;
+
+    transform: translate(-50%, 0);
+   
+    transition: 0.5s all;
+
+    background-color: rgba(128, 128, 128, 0.041); /* Cor de fundo com transparência */
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para realçar o efeito */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20%;
+    height: 47px;
+    padding: 20px;    
+}
+
+.nomeEcma h4{
+    font-size: 20px;
+}
+.nomeEcma h5{
+    font-size: 9px;
+    padding-left: 48px;
+}
+
+.contCabeca{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7%;
+
+    transition: top 0.3s; /* Adiciona uma transição suave para a animação */
+}
+
+.elemento{
+    font-size: 13px;
+}
+
+.lista {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 53%;
+    padding: 19px;
+    list-style: none;
+    z-index: 200;
+
+    background-color: rgba(128, 128, 128, 0.041); /* Cor de fundo com transparência */
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para realçar o efeito */
+}
+
+.parallax1 {
+    background: url(../IMG/VDO/Pag1.gif) no-repeat;
+    
+}
+
+.parallax4 {
+    background: url(../IMG/VDO/Pag3.gif) no-repeat;
+}
+
+.home {
+    width: 100%; 
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+
+    
+    position: relative;
+    overflow: hidden;
+    
+}
+.home::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 8;
+    background: linear-gradient(to bottom, #010103 0, #000000ab 40%, #000000);
+    backdrop-filter: blur(15px); /* Efeito de desfoque */
+}
+
+.home .conteudo {
+    z-index: 10;
+
+    font-weight: bolder;
+    line-height: 1.8; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tituloPag1{
+    font-size: 46px;
+    text-align: center;
+}
+.tituloPag1::after{
+    content: '';
+    width: 40rem;
+    height: 1px;
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: -11px auto;
+    background: linear-gradient(to right, #00000000, #ffffff, #00000000);/* Gradiente horizontal da esquerda para a direita */
+}
+
+.textpPag1{
+    max-width: 49%;
+    font-size: 21px;
+    text-align: justify;
+}
+
+.botaoMenu {
+    margin-top: 1rem;
+    padding: 0.9rem 3rem;
+
+    display: inline-block;
+    
+    font-size: 1.7rem;
+    color: #fff;    
+    text-decoration: none;
+}.botaoMenu:hover{
+    background-color: rgba(128, 128, 128, 0.041); /* Cor de fundo com transparência */
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para realçar o efeito */
+    transform: scale(1.3);
+}
+
+.plataformas {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.iconeNavegadores{
+    width: 96px;
+}
+
+.contNavrLogo{
+    z-index: 10;
+    border: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.contNavrLogo:hover{
+    border: 1px solid #ffffff;;
+
+    border: 1px solid transparent; /* Defina uma borda transparente inicial */
+    box-shadow: 0 0 0 2px rgb(255, 255, 255); /* Adicione uma sombra para simular a linha */
+    animation: animacaoDaBorda 2s linear infinite; /* Aplica a animação */
+}/* Define a animação */
+@keyframes animacaoDaBorda {
+    0% {
+      box-shadow: 0 0 0 1px rgb(255, 255, 255); /* Sombra inicial */
+    }
+    50% {
+      box-shadow: 0 0 0 1px transparent; /* Sombra transparente no meio da animação */
+    }
+    100% {
+      box-shadow: 0 0 0 1px rgb(255, 255, 255); /* Sombra final */
+    }
+}/* Define a animação */
+
+.plataforma {
+    display: inline-block;
+    width: 96px;
+    height: 96px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 10;
+}
+.plataforma:before{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 9px;
+    top: 9px;
+}
+
+.logoNav{
+    font-size: 50px;
+    padding-left: 24%;
+    padding-top: 13%;
+}
+.logoNav:hover{
+    transform: scale(1.3);
+}
+
+.contSobreJS{
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.destaques{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.tituloSobreRecusros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4%;
+    font-size: 47px;
+}
+
+.contContEcma{
+    max-width: 60%;
+    border: solid 1PX white;
+    text-align: center;
+}
+
+.contImg1 {
+    padding: 49px;
+
+    background: url(https://cdn.pixabay.com/photo/2023/08/01/18/45/ai-generated-8163597_1280.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: relative; /* Necessário para posicionar o pseudo-elemento */
+
+    backdrop-filter: blur(10px); /* Aplica o desfoque de 10 pixels */
+}
+.contImg1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.61); /* Cor escura com transparência */
+    backdrop-filter: blur(2px); /* Aplica o desfoque de 10 pixels */
+    
+}
+
+.sibTituloPag1{
+    font-size: 30px;
+    position: relative; /* Necessário para sobrepor conteúdo */
+    z-index: 1; /* Coloca o conteúdo sobre a camada escura */
+}
+
+.contSobreWcmaPropaganda{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 33px;
+}
+
+.contEcma .tituloPropagandaMenbros{
+    font-size: 17px;
+}
+.contEcma  .tituloPropagandaMenbros:after{
+    content: '';
+    width: 20rem;
+    height: 1px;
+    position: absolute;
+    background: #ffffff44;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 12px auto;
+    background: linear-gradient(to right, #00000000, #ffffff, #00000000);/* Gradiente horizontal da esquerda para a direita */
+}
+
+.textoAnuncioSobre{
+    text-align: center;
+    font-size: 13px;
+}
+
+.contImg2 {
+    padding: 49px;
+
+    background: url(https://cdn.pixabay.com/photo/2021/05/19/06/13/smartphone-6265047_1280.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: relative; /* Necessário para posicionar o pseudo-elemento */
+
+    backdrop-filter: blur(5px); /* Aplica o desfoque de 10 pixels */
+}
+.contImg2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.596); /* Cor escura com transparência */
+    backdrop-filter: blur(2px); /* Aplica o desfoque de 10 pixels */
+}
+
+.contImg3 {
+    padding: 49px;
+
+    background: url(https://cdn.pixabay.com/photo/2022/05/02/22/24/brain-7170502_1280.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;   
+
+    position: relative; /* Necessário para posicionar o pseudo-elemento */
+
+    backdrop-filter: blur(5px); /* Aplica o desfoque de 10 pixels */
+}
+.contImg3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor escura com transparência */
+    backdrop-filter: blur(2px); /* Aplica o desfoque de 10 pixels */
+}
+
+.contImg4 {
+    padding: 49px;
+
+    background: url(https://cdn.pixabay.com/photo/2020/05/07/18/25/tech-5142625_1280.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    position: relative; /* Necessário para posicionar o pseudo-elemento */
+
+    backdrop-filter: blur(5px); /* Aplica o desfoque de 10 pixels */
+}
+.contImg4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.589); /* Cor escura com transparência */
+    backdrop-filter: blur(2px); /* Aplica o desfoque de 10 pixels */
+}
+
+
+
+
+
+.textoFinal{
+    max-width: 58%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    font-size: 16px;
+}
+
+
+
+
+
+
+.contSobre{
+    text-align: center;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 29px;
+}
+
+.contAtualizacoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.titiloMaisInfo{
+    padding: 3%;
+}
+
+.contTextoMisAtt{
+    width: 590px;
+}
+.contAtualizacoes .titiloMaisInfo:after{
+    content: '';
+    width: 20rem;
+    height: 1px;
+    position: absolute;
+    background: #ffffff44;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 12px auto;
+    background: linear-gradient(to right, #00000000, #ffffff, #00000000);/* Gradiente horizontal da esquerda para a direita */
+}
+
+
+.contSobreMelhorias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid white;
+    border-right: 8px;
+}
+
+.contSobreAtts{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas de tamanho igual */
+    grid-gap: 20px; /* Espaçamento entre os elementos */
+
+}
+
+.cont1{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+    padding: 24px;
+}
+
+.textoSobreAtts{
+    max-width: 77%;
+    text-align: justify;
+    padding: 36px
+}
+
+.contFlex{    
+    width: 90%;
+    margin: 0 auto;
+    max-width: 80rem;
+}
+
+.colunas{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.coluna{
+    width: calc(25% - 2rem);
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.conteiner{
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.frente,
+.costas{
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+  border-radius: 10px;
+  background-position: center;
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1); 
+    backface-visibility: hidden;
+    text-align: center;
+    min-height: 280px;
+    height: auto;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.costas{
+    background: #000000;
+    background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+    background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+    background: linear-gradient(45deg,  #000000 0%,#000000 100%);
+}
+
+.frente:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .6;
+    background-color: #000;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+.conteiner:hover .frente,
+.conteiner:hover .costas{
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1),     
+}
+
+.costas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.costas .testoInterna {
+    font-size: 15px;
+}
+
+.interna{
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    outline: 1px solid transparent;
+    perspective: inherit;
+    z-index: 2;
+}
+
+.conteiner .costas{
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+
+.conteiner .frente{
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+}
+
+.conteiner:hover .costas{
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+}
+
+.conteiner:hover .frente{
+    transform: rotateY(-180deg);
+    transform-style: preserve-3d;
+}
+
+.frente .interna .testoInterna{
+    font-size: 25px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.frente .interna .testoInterna:after{
+    content: '';
+    width: 6rem;
+    height: 1px;
+    position: absolute;
+    background: #C6D4DF;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -.75rem;
+    background: linear-gradient(to right, #00000000, #ffffff, #00000000);/* Gradiente horizontal da esquerda para a direita */
+}
+
+.frente .interna span{
+    color: rgba(255,255,255,0.7);
+    font-family: 'Montserrat';
+    font-weight: 300;
+}
+  
+  @media screen and (max-width: 64rem){
+    .coluna{
+      width: calc(33.333333% - 2rem);
+    }
+}
+  
+  @media screen and (max-width: 48rem){
+    .coluna{
+      width: calc(50% - 2rem);
+    }
+}
+  
+  @media screen and (max-width: 32rem){
+    .coluna{
+      width: 100%;
+      margin: 0 0 2rem 0;
+    }
+}
+
+.contTextoFinal{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textoFinal{
+    font-size: 15px;
+    max-width: 27%;
+    text-align: center;
+}
+
+/* Estilos do rodapé */
+.contFooter{
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(to bottom, #000000,#000000, #0a0a0a);
+}
+
+footer {
+    text-align: center;
+    padding: 16px 0;
+    background-color: rgb(28 28 28 / 18%);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(126, 126, 126, 0.062);
+    width: 393px; 
+}  
